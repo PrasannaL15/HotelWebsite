@@ -1,0 +1,336 @@
+@charset "utf-8";
+
+// Set your brand colors
+$purple: #8a4d76;
+$pink: #fa7c91;
+$brown: #757763;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$secondary: white;
+$primary: $purple;
+$link: $pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+@import "../mybulma/bulma-0.9.4/bulma/bulma.sass";
+.content-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.banner-section {
+  height: 90vh;
+}
+.banner-section_container {
+  height: 100%;
+}
+.banner-section_container .columns {
+  height: 100%;
+}
+.banner-section_left {
+  height: 50%;
+  background-color: #fff;
+}
+.banner-section_right {
+  height: 50%;
+  background-color: red;
+}
+
+/*
+banner slider starts
+
+*/
+
+/* Swiper container stylng */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide_1 {
+  background-color: #643ca3;
+}
+
+.slide_2 {
+  background-color: #e38364;
+}
+
+.slide_3 {
+  background-color: #faf47a;
+}
+
+.slide_4 {
+  background-color: #64e3c1;
+}
+
+.slide_5 {
+  background-color: #9e6ffd;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  outline: none;
+  color: $secondary;
+}
+
+div.swiper-button-next,
+div.swiper-button-prev {
+  top: 50%;
+}
+/*
+banner slider starts
+
+*/
+
+/*Intro Section Starts*/
+.intro-section {
+  align-items: center;
+}
+.intro-section_container {
+  padding: 50px 10px;
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  align-items: left;
+}
+
+.intro-section_description {
+  padding: 50px 10px;
+}
+/*Intro Section Ends*/
+
+/*View section starts*/
+.view-section {
+  align-items: center;
+}
+
+.view-section_container {
+  display: grid;
+  grid-template-areas: "a a a a ";
+}
+
+.view_div {
+  grid-area: "a";
+  position: relative;
+  color: $secondary;
+  font-size: 22px;
+
+  text-shadow: 1px 1px 2px #000, 0 0 25px #000, 0 0 5px #000;
+  overflow: hidden;
+}
+.view_div img {
+  transition: all 1s;
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+}
+.view_div:hover img {
+  transform: scale(1.1);
+}
+
+/*View section ends*/
+
+/*Testimonials section starts*/
+
+.testimonials-section {
+  align-items: center;
+
+  .testimonials-section_container {
+    height: auto;
+    width: 100%;
+    padding: 50px 10px;
+    text-align: center;
+
+    .section-heading {
+      font-size: 13px;
+      display: block;
+      margin-bottom: 5px;
+      color: $primary;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .section-subheading {
+      font-size: 64px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .testimonialsSwiper {
+      padding: 20px 0;
+    }
+    .card {
+      margin: 10px 20px;
+    }
+  }
+}
+
+/*Testimonials section ends*/
+
+/*Places section starts*/
+.places-section {
+  align-items: center;
+  justify-content: center;
+  .places-section_container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+  }
+  .places-heading {
+    color: #000;
+    font-size: 42px;
+    margin-top: 0;
+    line-height: 120%;
+    font-family: "Cinzel";
+    font-weight: 700;
+    padding: 10px 0;
+  }
+  .places-subheading {
+    max-width: 800px;
+    margin: 15px auto 0;
+    text-align: center;
+  }
+  .places-grid {
+    position: relative;
+    margin: 50px 10px;
+    width: 80%;
+    align-items: center;
+    height: 50vh;
+    display: grid;
+    grid-template-areas: "main main";
+    gap: 10px;
+  }
+
+  .places-grid-main {
+    grid-area: "main";
+    height: 100%;
+  }
+  .places-grid-other {
+    grid-area: "main";
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+      "other other"
+      "other other";
+    gap: 10px;
+  }
+  .palces-card {
+    height: 100%;
+    position: relative;
+    text-align: left;
+    transition: all 1s;
+    background: rgba(2, 6, 21, 0.35);
+    img {
+      background-size: cover;
+      height: 100%;
+      filter: brightness(50%);
+      transition: all 1s;
+    }
+
+    .places-card-description {
+      width: 100%;
+      padding: 5px;
+      transition: all 1s;
+    }
+
+    .places-card-title {
+      color: $secondary;
+      font-size: 26px;
+    }
+    .places-card-subtitle {
+      color: $secondary;
+      font-size: 12px;
+    }
+    .content-overlay {
+      transform: translate(-50%, -20%);
+    }
+  }
+  // .places-card-main {
+  //   grid-area: "main";
+  // }
+  .palces-card:hover img {
+    filter: brightness(30%);
+  }
+  .palces-card:hover .places-card-title {
+    font-size: 30px;
+  }
+  .palces-card:hover .content-overlay {
+    transform: translate(-50%, -50%);
+  }
+  @media only screen and (max-width: 768px) {
+    .places-grid {
+      grid-template-areas:
+        "main"
+        "main";
+    }
+    .places-grid-other {
+      grid-template-areas:
+        "other"
+        "other"
+        "other"
+        "other";
+    }
+
+    .places-card-title {
+      color: $secondary;
+      font-size: 15px;
+    }
+    .places-card-subtitle {
+      color: $secondary;
+      font-size: 12px;
+    }
+  }
+}
+
+/*Places section ends*/
+
+@media only screen and (max-width: 768px) {
+  .banner-section {
+    height: 30vh;
+  }
+  .view-section_container {
+    display: grid;
+    grid-template-areas:
+      "a a"
+      "a a";
+  }
+}

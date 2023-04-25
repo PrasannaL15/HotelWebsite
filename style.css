@@ -1,0 +1,88 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css";
+
+.banner-section {
+  height: 90vh;
+}
+.banner-section_container {
+  height: 100%;
+}
+.banner-section_container .columns {
+  height: 100%;
+}
+.banner-section_left {
+  height: 50%;
+  background-color: #fff;
+}
+.banner-section_right {
+  height: 50%;
+  background-color: red;
+}
+
+/*
+banner slider starts
+
+*/
+
+/* Swiper container stylng */
+.swiper {
+  right: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide_1 {
+  background-color: #643ca3;
+}
+
+.slide_2 {
+  background-color: #e38364;
+}
+
+.slide_3 {
+  background-color: #faf47a;
+}
+
+.slide_4 {
+  background-color: #64e3c1;
+}
+
+.slide_5 {
+  background-color: #9e6ffd;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  outline: none;
+}
+
+div.swiper-button-next,
+div.swiper-button-prev {
+  top: 50%;
+}
+/*
+banner slider starts
+
+*/

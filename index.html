@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello Bulma!</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="has-navbar-fixed-top">
+    <nav
+      class="navbar is-fixed-top"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <img
+            src="https://bulma.io/images/bulma-logo.png"
+            width="112"
+            height="28"
+          />
+        </a>
+
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item"> Home </a>
+
+          <a class="navbar-item"> Documentation </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> More </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item"> About </a>
+              <a class="navbar-item"> Jobs </a>
+              <a class="navbar-item"> Contact </a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item"> Report an issue </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light"> Log in </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="hero banner-section is-medium is-primary is-bold">
+      <div class="swiper bannerSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide_1">Slide 1</div>
+          <div class="swiper-slide slide_2">Slide 2</div>
+          <div class="swiper-slide slide_3">Slide 3</div>
+          <div class="swiper-slide slide_4">Slide 4</div>
+          <div class="swiper-slide slide_5">Slide 5</div>
+        </div>
+        <!-- <div class="swiper-scrollbar"></div> -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <section class="hero intro-section">
+      <div class="intro-section_container">
+        <div class="intro-section_title">
+          <p class="first-title">WELCOME TO</p>
+          <p class="second-title">SEA NEST</p>
+        </div>
+        <div class="intro-section_description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+          libero eligendi porro odio voluptate tempora laboriosam. Maiores, quia
+          iure. Maxime consequuntur labore repellendus in iusto facilis fugit
+          sequi sunt nisi quam ipsa provident dicta cumque id reiciendis vel
+          nostrum porro ullam nobis mollitia, voluptatem est voluptates! Hic
+          placeat repellendus blanditiis.
+        </div>
+      </div>
+    </section>
+
+    <section class="hero view-section">
+      <div class="view-section_container">
+        <div class="view_div">
+          <img src="Images\view-section\abt1.jpg" alt="" />
+          <div class="content-overlay">Front View</div>
+        </div>
+        <div class="view_div">
+          <img src="Images\view-section\abt2.jpg" alt="" />
+          <div class="content-overlay">Sea View</div>
+        </div>
+        <div class="view_div">
+          <img src="Images\view-section\abt3.jpg" alt="" />
+          <div class="content-overlay">Balcony View</div>
+        </div>
+        <div class="view_div">
+          <img src="Images\view-section\abt4.jpg" alt="" />
+          <div class="content-overlay">Room View</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero testimonials-section">
+      <div class="testimonials-section_container">
+        <p class="section-heading">Testimonial</p>
+        <p class="section-subheading">Happy Guests</p>
+        <div class="swiper testimonialsSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image is-48x48">
+                        <img
+                          src="https://bulma.io/images/placeholders/96x96.png"
+                          alt="Placeholder image"
+                        />
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-4">John Smith</p>
+                      <p class="subtitle is-6">@johnsmith</p>
+                    </div>
+                  </div>
+
+                  <div class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                    <a href="#">#css</a> <a href="#">#responsive</a>
+                    <br />
+                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image is-48x48">
+                        <img
+                          src="https://bulma.io/images/placeholders/96x96.png"
+                          alt="Placeholder image"
+                        />
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-4">John Smith</p>
+                      <p class="subtitle is-6">@johnsmith</p>
+                    </div>
+                  </div>
+
+                  <div class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                    <a href="#">#css</a> <a href="#">#responsive</a>
+                    <br />
+                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image is-48x48">
+                        <img
+                          src="https://bulma.io/images/placeholders/96x96.png"
+                          alt="Placeholder image"
+                        />
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-4">John Smith</p>
+                      <p class="subtitle is-6">@johnsmith</p>
+                    </div>
+                  </div>
+
+                  <div class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                    <a href="#">#css</a> <a href="#">#responsive</a>
+                    <br />
+                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+          </div>
+          <!-- <div class="swiper-scrollbar"></div> -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero places-section">
+      <div class="places-section_container">
+        <p class="places-heading">Tourist Places to Visit near Sea Fans</p>
+        <p class="places-subheading">
+          Manali is a high-altitude Himalayan resort town in India’s northern
+          Himachal Pradesh state. It has a reputation as a backpacking center
+          and honeymoon destination. Set on the Beas River, it’s a gateway for
+          skiing in the Solang Valley and trekking in Parvati Valley. It's also
+          a jumping-off point for paragliding, rafting and mountaineering in the
+          Pir Panjal mountains, home to 4,000m-high Rohtang Pass.
+        </p>
+        <div class="places-grid">
+          <div class="places-grid-main">
+            <div class="palces-card places-card-main">
+              <img src="Images\1.jpg" alt="" />
+              <div class="places-card-description content-overlay">
+                <p class="places-card-title">Lorem, ipsum.</p>
+                <p class="places-card-subtitle">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Veritatis, id.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="places-grid-other">
+            <div class="palces-card">
+              <img src="Images\1.jpg" alt="" />
+              <div class="places-card-description content-overlay">
+                <p class="places-card-title">Lorem ipsum</p>
+                <p class="places-card-subtitle">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Dignissimos, autem!
+                </p>
+              </div>
+            </div>
+            <div class="palces-card">
+              <img src="Images\1.jpg" alt="" />
+              <div class="places-card-description content-overlay">
+                <p class="places-card-title">Lorem ipsum</p>
+                <p class="places-card-subtitle">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Dignissimos, autem!
+                </p>
+              </div>
+            </div>
+            <div class="palces-card">
+              <img src="Images\1.jpg" alt="" />
+              <div class="places-card-description content-overlay">
+                <p class="places-card-title">Lorem ipsum</p>
+                <p class="places-card-subtitle">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Dignissimos, autem!
+                </p>
+              </div>
+            </div>
+            <div class="palces-card">
+              <img src="Images\1.jpg" alt="" />
+              <div class="places-card-description content-overlay">
+                <p class="places-card-title">Lorem ipsum</p>
+                <p class="places-card-subtitle">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Dignissimos, autem!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
