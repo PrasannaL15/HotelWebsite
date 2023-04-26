@@ -155,4 +155,37 @@ $(document).ready(function () {
     },
   });
   /*Dynamic Testimonials ends*/
+
+  /*  Booking section starts    */
+
+  // Initialize all input of type date
+  options = {
+    isRange: "true",
+    labelFrom: "Check-In",
+    labelTo: "Check-Out",
+  };
+  var calendars = bulmaCalendar.attach('[type="date"]', options);
+
+  // Loop on each calendar initialized
+  for (var i = 0; i < calendars.length; i++) {
+    // Add listener to select event
+    calendars[i].on("select", (date) => {
+      console.log(date);
+    });
+  }
+
+  // To access to bulmaCalendar instance of an element
+  var element = document.querySelector("#my-element");
+  if (element) {
+    // bulmaCalendar instance is available as element.bulmaCalendar
+    element.bulmaCalendar.on("select", function (datepicker) {
+      console.log(datepicker.data.value());
+    });
+  }
+  var dropdown = document.querySelector(".dropdown");
+  dropdown.addEventListener("click", function (event) {
+    event.stopPropagation();
+    dropdown.classList.toggle("is-active");
+  });
+  /*  Booking section ends    */
 });

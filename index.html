@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sea Nest</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
+     -->
+
+    <script src="
+https://cdn.jsdelivr.net/npm/bulma-calendar@6.1.19/dist/js/bulma-calendar.min.js
+"></script>
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/bulma-calendar@6.1.19/dist/css/bulma-calendar.min.css
+"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
@@ -253,7 +267,8 @@
                   <div class="content">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                    <a href="#">#css</a> <a href="#">#responsive</a>
+                    <a href="javascript:void(0)">#css</a>
+                    <a href="javascript:void(0)">#responsive</a>
                     <br />
                     <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                   </div>
@@ -281,7 +296,7 @@
                   <div class="content">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                    <a href="#">#css</a> <a href="#">#responsive</a>
+                    <a href="javascript:void(0)">#css</a> <a href="javascript:void(0)">#responsive</a>
                     <br />
                     <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                   </div>
@@ -309,7 +324,7 @@
                   <div class="content">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                    <a href="#">#css</a> <a href="#">#responsive</a>
+                    <a href="javascript:void(0)">#css</a> <a href="javascript:void(0)">#responsive</a>
                     <br />
                     <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                   </div>
@@ -337,7 +352,7 @@
                   <div class="content">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                    <a href="#">#css</a> <a href="#">#responsive</a>
+                    <a href="javascript:void(0)">#css</a> <a href="javascript:void(0)">#responsive</a>
                     <br />
                     <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                   </div>
@@ -365,7 +380,7 @@
                   <div class="content">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                    <a href="#">#css</a> <a href="#">#responsive</a>
+                    <a href="javascript:void(0)">#css</a> <a href="javascript:void(0)">#responsive</a>
                     <br />
                     <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                   </div>
@@ -428,62 +443,32 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
+        <div class="booking-part">
+          <p>Make Your Reservation!</p>
+          <div class="checking-block"><input type="date" /></div>
+          <div class="details-block">
+            <div class="select">
+              <select id="rooms">
+                <option selected>Rooms</option>
 
-        <div class="contact-form">
-          <form id="contact" action="" method="post">
-            <h3>Contact Us</h3>
-            <h4>Book your visit now</h4>
-            <fieldset>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </div>
+            <div class="control">
               <input
-                placeholder="Your name"
+                id="adults"
+                class="input"
                 type="text"
-                tabindex="1"
-                required
-                autofocus
+                placeholder="Adults"
               />
-            </fieldset>
-            <fieldset>
-              <input
-                placeholder="Your Email Address"
-                type="email"
-                tabindex="2"
-                required
-              />
-            </fieldset>
-            <fieldset>
-              <input
-                placeholder="Your Phone Number (optional)"
-                type="tel"
-                tabindex="3"
-                required
-              />
-            </fieldset>
-            <fieldset>
-              <input
-                placeholder="Your Email Id(optional)"
-                type="url"
-                tabindex="4"
-                required
-              />
-            </fieldset>
-            <fieldset>
-              <textarea
-                placeholder="Type your message here...."
-                tabindex="5"
-                required
-              ></textarea>
-            </fieldset>
-            <fieldset>
-              <button
-                name="submit"
-                type="submit"
-                id="contact-submit"
-                data-submit="...Sending"
-              >
-                Submit
-              </button>
-            </fieldset>
-          </form>
+            </div>
+            <div class="control">
+              <input id="kids" class="input" type="text" placeholder="Kids" />
+            </div>
+          </div>
+          <div role="button" class="contact-block">Enquire on WhatsApp</div>
         </div>
       </div>
     </section>
@@ -502,9 +487,9 @@
           <div class="col-md-4">
             <h3>Connect with Us</h3>
             <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Instagram</a></li>
+              <li><a href="javascript:void(0)">Facebook</a></li>
+              <li><a href="javascript:void(0)">Twitter</a></li>
+              <li><a href="javascript:void(0)">Instagram</a></li>
             </ul>
           </div>
           <div class="col-md-4">
@@ -527,9 +512,9 @@
             </div>
             <div class="col-md-6">
               <ul class="footer-menu">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Sitemap</a></li>
+                <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                <li><a href="javascript:void(0)">Terms of Use</a></li>
+                <li><a href="javascript:void(0)">Sitemap</a></li>
               </ul>
             </div>
           </div>
