@@ -163,6 +163,7 @@ $(document).ready(function () {
     isRange: "true",
     labelFrom: "Check-In",
     labelTo: "Check-Out",
+    minDate: new Date(),
   };
   var calendars = bulmaCalendar.attach('[type="date"]', options);
 
