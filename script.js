@@ -1,7 +1,7 @@
-$('html,body').scrollTop(0);
 $(document).ready(function () {
-
   // Check for click events on the navbar burger icon
+  $("html,body").scrollTop(0);
+
   $(".navbar-burger").click(function () {
     // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
     $(".navbar-burger").toggleClass("is-active");
@@ -52,17 +52,13 @@ $(document).ready(function () {
     },
   });
   $(".video-play-btn").click(() => {
-    $(".modal iframe").attr(
-      "src",
-      "https://www.youtube.com/embed/A-yYTkfrHR0?autoplay=1"
-    );
+    $(".modal iframe").attr("src", "https://www.youtube.com/embed/A-yYTkfrHR0");
     $(".modal").addClass("is-active");
     console.log("clicked");
   });
 
   $(".modal-close").click(() => {
     $(".modal iframe").attr("src", "");
-
     $(".modal ").removeClass("is-active");
   });
   document.addEventListener("keydown", (event) => {
