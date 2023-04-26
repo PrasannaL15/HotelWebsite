@@ -7,10 +7,19 @@ $(document).ready(function () {
   });
   console.log("Hello");
 
+  $(window).scroll(function () {
+    if ($(document).scrollTop() > 50) {
+      $("nav").removeClass("transparent");
+    } else {
+      $("nav").addClass("transparent");
+    }
+  });
+
   //Initialize swiper
   let bannerSwiper = new Swiper(".bannerSwiper", {
     lazy: true,
     loop: true,
+    effect: "fade",
     autoplay: true,
     pagination: {
       el: ".swiper-pagination",
@@ -37,7 +46,50 @@ $(document).ready(function () {
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      767: { slidesPerView: 3 },
+      767: { slidesPerView: 1 },
     },
   });
+  $(".video-play-btn").click(() => {
+    $(".modal iframe").attr(
+      "src",
+      "https://www.youtube.com/embed/A-yYTkfrHR0?autoplay=1"
+    );
+    $(".modal").addClass("is-active");
+    console.log("clicked");
+  });
+
+  $(".modal-close").click(() => {
+    $(".modal iframe").attr("src", "");
+
+    $(".modal ").removeClass("is-active");
+  });
+  document.addEventListener("keydown", (event) => {
+    const e = event || window.event;
+
+    if (e.keyCode === 27) {
+      // Escape key
+      $(".modal iframe").attr("src", "");
+
+      $(".modal").removeClass("is-active");
+    }
+  });
+});
+
+testimonials = [
+  {
+    imageName: "imageName.jpg",
+    name: "ABC",
+    designation: "ddd",
+    review: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliasquas sequi, aut animi enim dolorum sed doloremque aliquid quosvoluptatibus pariatur similique tenetur ad, nisi magni beataetemporibus sapiente quaerat est placeat et ipsa delectus! Eosillum illo, repellendus quas facilis.iusto, ab quibusdam eaque officiis laboriosam cumque? At impedit`,
+  },
+  {
+    imageName: "imageName.jpg",
+    name: "ABC",
+    designation: "ddd",
+    review: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliasquas sequi, aut animi enim dolorum sed doloremque aliquid quosvoluptatibus pariatur similique tenetur ad, nisi magni beataetemporibus sapiente quaerat est placeat et ipsa delectus! Eosillum illo, repellendus quas facilis.iusto, ab quibusdam eaque officiis laboriosam cumque? At impedit`,
+  },
+];
+
+testimonials.forEach((element) => {
+  console.log(element.name);
 });
