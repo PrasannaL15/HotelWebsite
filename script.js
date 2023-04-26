@@ -33,25 +33,6 @@ $(document).ready(function () {
     },
   });
 
-  //Initialize swiper
-  let testimonialSwiper = new Swiper(".testimonialsSwiper", {
-    lazy: true,
-    loop: true,
-    autoplay: true,
-    slidesPerView: 1,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      767: { slidesPerView: 1 },
-    },
-  });
-
   $(".video-play-btn").click(() => {
     $(".modal iframe").attr("src", "https://www.youtube.com/embed/A-yYTkfrHR0");
     $(".modal").addClass("is-active");
@@ -93,23 +74,85 @@ $(document).ready(function () {
     window.addEventListener("scroll", triggerAnimation);
   }, 1000);
   /*Fly In animation Endss*/
-});
 
-testimonials = [
-  {
-    imageName: "imageName.jpg",
-    name: "ABC",
-    designation: "ddd",
-    review: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliasquas sequi, aut animi enim dolorum sed doloremque aliquid quosvoluptatibus pariatur similique tenetur ad, nisi magni beataetemporibus sapiente quaerat est placeat et ipsa delectus! Eosillum illo, repellendus quas facilis.iusto, ab quibusdam eaque officiis laboriosam cumque? At impedit`,
-  },
-  {
-    imageName: "imageName.jpg",
-    name: "ABC",
-    designation: "ddd",
-    review: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliasquas sequi, aut animi enim dolorum sed doloremque aliquid quosvoluptatibus pariatur similique tenetur ad, nisi magni beataetemporibus sapiente quaerat est placeat et ipsa delectus! Eosillum illo, repellendus quas facilis.iusto, ab quibusdam eaque officiis laboriosam cumque? At impedit`,
-  },
-];
+  /*Dynamic Testimonials starts*/
+  testimonials = [
+    {
+      imageName: "vikas.jpeg",
+      name: "Vikas",
+      Nationality: "",
+      designation: "ddd",
+      review: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliasquas sequi, aut animi enim dolorum sed doloremque aliquid quosvoluptatibus pariatur similique tenetur ad, nisi magni beataetemporibus sapiente quaerat est placeat et ipsa delectus! Eosillum illo, repellendus quas facilis.iusto, ab quibusdam eaque officiis laboriosam cumque? At impedit`,
+      date: "16 Mar 2023",
+    },
+    {
+      imageName: "vikas.jpeg",
+      name: "ABC",
+      designation: "ddd",
+      Nationality: "",
+      date: "16 Mar 2023",
+      review: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliasquas sequi, aut animi enim dolorum sed doloremque aliquid quosvoluptatibus pariatur similique tenetur ad, nisi magni beataetemporibus sapiente quaerat est placeat et ipsa delectus! Eosillum illo, repellendus quas facilis.iusto, ab quibusdam eaque officiis laboriosam cumque? At impedit`,
+    },
+  ];
 
-testimonials.forEach((element) => {
-  console.log(element.name);
+  testimonials.forEach((element) => {
+    var testimonialCard =
+      ` <div class="swiper-slide">
+    <div class="card">
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-96x96">
+              <img
+                src="Images/Testimony/` +
+      element.imageName +
+      `"
+                alt="Reviewer image"
+              />
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">` +
+      element.name +
+      `</p>
+            <p class="subtitle is-6">` +
+      element.designation +
+      `</p>
+          </div>
+        </div>
+  
+        <div class="content">
+         ` +
+      element.review +
+      `
+          <br><br><time datetime="2016-1-1">` +
+      element.date +
+      `</time>
+        </div>
+      </div>
+    </div>
+  </div>`;
+    console.log("testimonials");
+    $(".testimonialsSwiper .swiper-wrapper").append(testimonialCard);
+  });
+
+  //Initialize swiper
+  let testimonialSwiper = new Swiper(".testimonialsSwiper", {
+    lazy: true,
+    loop: true,
+    autoplay: true,
+    slidesPerView: 1,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      767: { slidesPerView: 1 },
+    },
+  });
+  /*Dynamic Testimonials ends*/
 });

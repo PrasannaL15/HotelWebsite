@@ -10146,6 +10146,12 @@ fieldset {
   .places-heading .brandName {
     font-size: 56px;
   }
+  .swiper-slide .card {
+    min-width: 80vw;
+  }
+  .swiper-slide .card .card-content {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
