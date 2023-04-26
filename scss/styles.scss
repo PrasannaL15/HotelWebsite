@@ -2,10 +2,13 @@
 * {
   font-family: "Source Serif Pro", serif !important;
 }
+body {
+  background-color: white;
+}
 // Set your brand colors
 $purple: #8a4d76;
 $pink: #fa7c91;
-$brown: black;
+$brown: hsl(0, 0%, 21%);
 $beige-light: #d0d1cd;
 $beige-lighter: #eff0eb;
 
@@ -279,7 +282,12 @@ banner slider starts
     }
   }
 }
-
+.swiper-slide {
+  transition: all 1s;
+}
+.swiper-slide:hover {
+  transform: scale(1.1);
+}
 /*Testimonials section ends*/
 
 /*Places section starts*/
@@ -296,7 +304,7 @@ banner slider starts
     padding: 20px 0;
   }
   .places-heading {
-    color: #000;
+    color: $brown;
     font-size: 42px;
     margin-top: 0;
     line-height: 120%;
@@ -637,6 +645,25 @@ fieldset {
 }
 /*contact form ends*/
 
+.fly-in-block {
+  transform: translateY(100px);
+}
+.flyIn {
+  animation: flyIn 0.8s forwards;
+  -webkit-animation: flyIn 0.8s forwards;
+}
+
+@keyframes flyIn {
+  100% {
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes flyIn {
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .navbar-link::after {
     display: none;
@@ -687,5 +714,14 @@ fieldset {
   .nextline::after {
     content: "\a";
     white-space: pre;
+  }
+
+  .places-heading {
+    color: #000;
+    font-size: 42px;
+
+    .brandName {
+      font-size: 56px;
+    }
   }
 }

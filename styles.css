@@ -3,6 +3,10 @@
   font-family: "Source Serif Pro", serif !important;
 }
 
+body {
+  background-color: white;
+}
+
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
 .pagination-previous,
@@ -338,7 +342,7 @@ pre {
 }
 
 body {
-  color: black;
+  color: hsl(0, 0%, 21%);
   font-size: 1em;
   font-weight: 400;
   line-height: 1.5;
@@ -403,7 +407,7 @@ fieldset {
 pre {
   -webkit-overflow-scrolling: touch;
   background-color: hsl(0, 0%, 96%);
-  color: black;
+  color: hsl(0, 0%, 21%);
   font-size: 0.875em;
   overflow-x: auto;
   padding: 1.25rem 1.5rem;
@@ -442,7 +446,7 @@ table th {
   background-color: hsl(0, 0%, 100%);
   border-radius: 6px;
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
-  color: black;
+  color: hsl(0, 0%, 21%);
   display: block;
   padding: 1.25rem;
 }
@@ -499,13 +503,13 @@ a.box:active {
   box-shadow: 0 0 0 0.125em rgba(250, 124, 145, 0.25);
 }
 .button:active, .button.is-active {
-  border-color: black;
+  border-color: hsl(0, 0%, 21%);
   color: hsl(0, 0%, 21%);
 }
 .button.is-text {
   background-color: transparent;
   border-color: transparent;
-  color: black;
+  color: hsl(0, 0%, 21%);
   text-decoration: underline;
 }
 .button.is-text:hover, .button.is-text.is-hovered, .button.is-text:focus, .button.is-text.is-focused {
@@ -2042,13 +2046,13 @@ div.icon-text {
   background-color: hsl(0, 0%, 93%);
 }
 .progress::-webkit-progress-value {
-  background-color: black;
+  background-color: hsl(0, 0%, 21%);
 }
 .progress::-moz-progress-bar {
-  background-color: black;
+  background-color: hsl(0, 0%, 21%);
 }
 .progress::-ms-fill {
-  background-color: black;
+  background-color: hsl(0, 0%, 21%);
   border: none;
 }
 .progress.is-white::-webkit-progress-value {
@@ -2177,7 +2181,7 @@ div.icon-text {
   animation-name: moveIndeterminate;
   animation-timing-function: linear;
   background-color: hsl(0, 0%, 93%);
-  background-image: linear-gradient(to right, black 30%, hsl(0, 0%, 93%) 30%);
+  background-image: linear-gradient(to right, hsl(0, 0%, 21%) 30%, hsl(0, 0%, 93%) 30%);
   background-position: top left;
   background-repeat: no-repeat;
   background-size: 150% 150%;
@@ -2434,7 +2438,7 @@ div.icon-text {
   align-items: center;
   background-color: hsl(0, 0%, 96%);
   border-radius: 4px;
-  color: black;
+  color: hsl(0, 0%, 21%);
   display: inline-flex;
   font-size: 0.75rem;
   height: 2em;
@@ -2630,7 +2634,7 @@ a.tag:hover {
 }
 
 .subtitle {
-  color: black;
+  color: hsl(0, 0%, 21%);
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.25;
@@ -3413,7 +3417,7 @@ a.tag:hover {
 
 .file-cta {
   background-color: hsl(0, 0%, 96%);
-  color: black;
+  color: hsl(0, 0%, 21%);
 }
 
 .file-name {
@@ -3670,7 +3674,7 @@ a.tag:hover {
 .control.has-icons-left .input:focus ~ .icon,
 .control.has-icons-left .select:focus ~ .icon, .control.has-icons-right .input:focus ~ .icon,
 .control.has-icons-right .select:focus ~ .icon {
-  color: black;
+  color: hsl(0, 0%, 21%);
 }
 .control.has-icons-left .input.is-small ~ .icon,
 .control.has-icons-left .select.is-small ~ .icon, .control.has-icons-right .input.is-small ~ .icon,
@@ -3804,7 +3808,7 @@ a.tag:hover {
   background-color: hsl(0, 0%, 100%);
   border-radius: 0.25rem;
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
-  color: black;
+  color: hsl(0, 0%, 21%);
   max-width: 100%;
   position: relative;
 }
@@ -3935,7 +3939,7 @@ a.tag:hover {
 }
 
 .dropdown-item {
-  color: black;
+  color: hsl(0, 0%, 21%);
   display: block;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -4144,7 +4148,7 @@ button.dropdown-item.is-active {
 }
 .menu-list a {
   border-radius: 2px;
-  color: black;
+  color: hsl(0, 0%, 21%);
   display: block;
   padding: 0.5em 0.75em;
 }
@@ -4305,7 +4309,7 @@ button.dropdown-item.is-active {
 
 .message-header {
   align-items: center;
-  background-color: black;
+  background-color: hsl(0, 0%, 21%);
   border-radius: 4px 4px 0 0;
   color: #fff;
   display: flex;
@@ -4331,7 +4335,7 @@ button.dropdown-item.is-active {
   border-radius: 4px;
   border-style: solid;
   border-width: 0 0 0 4px;
-  color: black;
+  color: hsl(0, 0%, 21%);
   padding: 1.25em 1.5em;
 }
 .message-body code,
@@ -5056,7 +5060,7 @@ body.has-navbar-fixed-bottom {
 }
 
 .navbar-burger {
-  color: black;
+  color: hsl(0, 0%, 21%);
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -5109,7 +5113,7 @@ body.has-navbar-fixed-bottom {
 
 .navbar-item,
 .navbar-link {
-  color: black;
+  color: hsl(0, 0%, 21%);
   display: block;
   line-height: 1.5;
   padding: 0.5rem 0.75rem;
@@ -5730,12 +5734,12 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   padding: 0.5em;
 }
 .panel-tabs a.is-active {
-  border-bottom-color: black;
+  border-bottom-color: hsl(0, 0%, 21%);
   color: hsl(0, 0%, 21%);
 }
 
 .panel-list a {
-  color: black;
+  color: hsl(0, 0%, 21%);
 }
 .panel-list a:hover {
   color: #fa7c91;
@@ -5811,7 +5815,7 @@ label.panel-block:hover {
   border-bottom-color: hsl(0, 0%, 86%);
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  color: black;
+  color: hsl(0, 0%, 21%);
   display: flex;
   justify-content: center;
   margin-bottom: -1px;
@@ -7446,11 +7450,11 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .has-text-grey-dark {
-  color: black !important;
+  color: hsl(0, 0%, 21%) !important;
 }
 
 .has-background-grey-dark {
-  background-color: black !important;
+  background-color: hsl(0, 0%, 21%) !important;
 }
 
 .has-text-grey {
@@ -9633,7 +9637,7 @@ banner slider starts
 .intro-section {
   align-items: center;
   padding: 20px 0;
-  color: black;
+  color: hsl(0, 0%, 21%);
   background-color: white;
 }
 
@@ -9735,6 +9739,14 @@ banner slider starts
   display: flex;
 }
 
+.swiper-slide {
+  transition: all 1s;
+}
+
+.swiper-slide:hover {
+  transform: scale(1.1);
+}
+
 /*Testimonials section ends*/
 /*Places section starts*/
 .places-section {
@@ -9751,7 +9763,7 @@ banner slider starts
   padding: 20px 0;
 }
 .places-section .places-heading {
-  color: #000;
+  color: hsl(0, 0%, 21%);
   font-size: 42px;
   margin-top: 0;
   line-height: 120%;
@@ -10062,6 +10074,25 @@ fieldset {
 }
 
 /*contact form ends*/
+.fly-in-block {
+  transform: translateY(100px);
+}
+
+.flyIn {
+  animation: flyIn 0.8s forwards;
+  -webkit-animation: flyIn 0.8s forwards;
+}
+
+@keyframes flyIn {
+  100% {
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes flyIn {
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
 @media only screen and (max-width: 768px) {
   .navbar-link::after {
     display: none;
@@ -10107,6 +10138,13 @@ fieldset {
   .nextline::after {
     content: "\a";
     white-space: pre;
+  }
+  .places-heading {
+    color: #000;
+    font-size: 42px;
+  }
+  .places-heading .brandName {
+    font-size: 56px;
   }
 }
 

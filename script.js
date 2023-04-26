@@ -51,6 +51,7 @@ $(document).ready(function () {
       767: { slidesPerView: 1 },
     },
   });
+
   $(".video-play-btn").click(() => {
     $(".modal iframe").attr("src", "https://www.youtube.com/embed/A-yYTkfrHR0");
     $(".modal").addClass("is-active");
@@ -71,6 +72,27 @@ $(document).ready(function () {
       $(".modal").removeClass("is-active");
     }
   });
+
+  /*Fly In animation Starts*/
+  setTimeout(() => {
+    const block = document.querySelector(".fly-in-block");
+    const blockOffset = block.offsetTop;
+    console.log("block offset ", blockOffset);
+    console.log("block offset ", blockOffset);
+
+    const triggerAnimation = () => {
+      const scrollHeight = window.pageYOffset + 200;
+      console.log("scrollHeight offset ", scrollHeight);
+      if (scrollHeight >= blockOffset) {
+        block.classList.add("flyIn");
+        window.removeEventListener("scroll", triggerAnimation);
+        console.log("inin");
+      }
+    };
+    console.log("h");
+    window.addEventListener("scroll", triggerAnimation);
+  }, 1000);
+  /*Fly In animation Endss*/
 });
 
 testimonials = [
