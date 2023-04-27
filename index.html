@@ -13,12 +13,11 @@
     />
      -->
 
-    <script src="
-https://cdn.jsdelivr.net/npm/bulma-calendar@6.1.19/dist/js/bulma-calendar.min.js
+    <script src="myBulmaCalender/bulma-calendar.min.js
 "></script>
     <link
       href="
-https://cdn.jsdelivr.net/npm/bulma-calendar@6.1.19/dist/css/bulma-calendar.min.css
+      myBulmaCalender/bulma-calendar.min.css
 "
       rel="stylesheet"
     />
@@ -443,33 +442,46 @@ https://cdn.jsdelivr.net/npm/bulma-calendar@6.1.19/dist/css/bulma-calendar.min.c
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
-        <div class="booking-part">
-          <p>Make Your Reservation!</p>
-          <div class="checking-block"><input type="date" /></div>
-          <div class="details-block">
-            <div class="select">
-              <select id="rooms">
-                <option selected>Rooms</option>
+        <form   onsubmit="whatsAppBooking();return false">
+          <div class="booking-part">
+            <p>Make Your Reservation!</p>
 
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-              </select>
+            <div class="checking-block">
+              <input required id="dateSelect" type="date" />
             </div>
-            <div class="control">
-              <input
-                id="adults"
-                class="input"
-                type="text"
-                placeholder="Adults"
-              />
+
+            <div class="details-block">
+              <div class="select">
+                <select id="rooms">
+                  <option selected>Rooms</option>
+
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+              </div>
+              <div class="control">
+                <input required
+                  id="adults"
+                  class="input"
+                  type="text"
+                  placeholder="Adults"
+                />
+              </div>
+              <div class="control">
+                <input required id="kids" class="input" type="text" placeholder="Kids" />
+              </div>
             </div>
-            <div class="control">
-              <input id="kids" class="input" type="text" placeholder="Kids" />
+            <input 
+              id="bookingSubmitbtn"
+              type="button"
+              value="Enquire on WhatsApp"
+              class="contact-block"
+            >
+              
             </div>
           </div>
-          <div role="button" class="contact-block">Enquire on WhatsApp</div>
-        </div>
+        </form>
       </div>
     </section>
 

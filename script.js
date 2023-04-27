@@ -161,6 +161,7 @@ $(document).ready(function () {
   // Initialize all input of type date
   options = {
     isRange: "true",
+
     labelFrom: "Check-In",
     labelTo: "Check-Out",
     minDate: new Date(),
@@ -175,18 +176,39 @@ $(document).ready(function () {
     });
   }
 
-  // To access to bulmaCalendar instance of an element
-  var element = document.querySelector("#my-element");
-  if (element) {
-    // bulmaCalendar instance is available as element.bulmaCalendar
-    element.bulmaCalendar.on("select", function (datepicker) {
-      console.log(datepicker.data.value());
-    });
-  }
-  var dropdown = document.querySelector(".dropdown");
-  dropdown.addEventListener("click", function (event) {
-    event.stopPropagation();
-    dropdown.classList.toggle("is-active");
-  });
   /*  Booking section ends    */
+
+  $("#bookingSubmitbtn").click(function (e) {
+    whatsAppBooking();
+  });
 });
+
+function whatsAppBooking() {
+  //Preventing page refresh
+
+  console.log($("#dateSelect").val());
+
+  if (
+    $("#dateSelect").val() == "" ||
+    $("#adults").val() == "" ||
+    $("#kids").val() == ""
+  ) {
+    alert("Please Enter All The Details To Enquire");
+  } else {
+    messagetext =
+      `Hey I am Intrested in booking Villa!
+      Dates - ` +
+      $("#dateSelect").val() +
+      `
+      Rooms - ` +
+      $("#adults").val() +
+      `
+      Adults -` +
+      $("#kids").val() +
+      `
+      Kids - 
+      `;
+    htmlLink = "https://wa.me/919834069861?text=" + encodeURI(messagetext) + "";
+    window.open(htmlLink, (target = "_blank"));
+  }
+}
