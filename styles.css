@@ -9516,6 +9516,7 @@ body.has-navbar-fixed-top {
 
 .brandName {
   font-style: italic;
+  white-space: nowrap;
 }
 
 .navbar {
@@ -9739,7 +9740,7 @@ banner slider starts
 }
 .testimonials-section .testimonials-section_container .card {
   margin: 20px 20px;
-  min-height: 40vh;
+  height: clamp(10rem, 50vh, 40rem);
   max-width: 60%;
   display: flex;
 }
@@ -9866,6 +9867,7 @@ banner slider starts
 .video-section .video-section_container {
   display: flex;
   position: relative;
+  align-items: center;
 }
 .video-section .video-section_container div {
   padding: 20px;
@@ -9907,6 +9909,7 @@ banner slider starts
 .video-section .info-part .title {
   font-size: 56px;
   padding: 30px 0;
+  text-align: center;
 }
 .video-section .info-part .subtitle {
   text-align: center;
@@ -10140,7 +10143,6 @@ banner slider starts
     flex-direction: column;
   }
   .testimonials-section .testimonials-section_container .card {
-    height: 50vh;
     max-width: 90%;
   }
   .swiper-button-next::after,
@@ -10171,10 +10173,10 @@ banner slider starts
   .places-heading .brandName {
     font-size: 56px;
   }
-  .swiper-slide .card {
-    min-width: 80vw;
+  .testimonials-section_container .swiper-slide .card {
+    height: clamp(30rem, 60vh, 40rem);
   }
-  .swiper-slide .card .card-content {
+  .testimonials-section_container .swiper-slide .card .card-content {
     width: 100%;
   }
   .whatsappDiv {

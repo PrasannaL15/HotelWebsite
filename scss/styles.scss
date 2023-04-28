@@ -6,7 +6,9 @@ body {
   background-color: white;
   overflow-x: hidden;
 }
+
 // Set your brand colors
+$border-radius: 10px;
 $purple: hsl(0, 0%, 21%);
 $pink: #5c48cf;
 $brown: hsl(0, 0%, 21%);
@@ -32,7 +34,7 @@ $input-shadow: none;
 @import "../mybulma/bulma-0.9.4/bulma/bulma.sass";
 
 img {
-  border-radius: 10px;
+  border-radius: $border-radius;
 }
 
 .datetimepicker {
@@ -50,6 +52,7 @@ body.has-navbar-fixed-top {
 }
 .brandName {
   font-style: italic;
+  white-space: nowrap;
 }
 
 .navbar {
@@ -281,10 +284,8 @@ banner slider starts
     }
     .card {
       margin: 20px 20px;
-      min-height: 40vh;
-
+      height: clamp(10rem, 50vh, 40rem);
       max-width: 60%;
-
       display: flex;
     }
   }
@@ -426,6 +427,7 @@ banner slider starts
   .video-section_container {
     display: flex;
     position: relative;
+    align-items: center;
     div {
       padding: 20px;
     }
@@ -434,7 +436,7 @@ banner slider starts
     flex-grow: 1;
     position: relative;
     img {
-      border-radius: 10px;
+      border-radius: $border-radius;
     }
     .video-play-btn {
       position: absolute;
@@ -472,6 +474,7 @@ banner slider starts
     .title {
       font-size: 56px;
       padding: 30px 0;
+      text-align: center;
     }
     .subtitle {
       text-align: center;
@@ -524,7 +527,7 @@ banner slider starts
     height: clamp(20rem, 70vh, 30rem);
 
     padding: 10px 10px;
-    border-radius: 10px;
+    border-radius: $border-radius;
     flex-grow: 0.5;
     display: flex;
     flex-direction: column;
@@ -561,7 +564,7 @@ banner slider starts
     }
     .contact-block {
       background-color: #25d366;
-      border-radius: 10px;
+      border-radius: $border-radius;
       padding: 10px;
       color: white;
       cursor: pointer;
@@ -572,7 +575,7 @@ banner slider starts
   .map {
     height: clamp(20rem, 70vh, 30rem);
     flex-grow: 1;
-    border-radius: 10px;
+    border-radius: $border-radius;
 
     border: none;
     margin: 0;
@@ -594,7 +597,7 @@ banner slider starts
 // }
 
 // #contact {
-//   border-radius: 10px;
+//   border-radius: $border-radius;
 //   background: #f9f9f9;
 //   padding: 25px;
 // }
@@ -836,7 +839,7 @@ banner slider starts
     flex-direction: column;
   }
   .testimonials-section .testimonials-section_container .card {
-    height: 50vh;
+    // height: clamp(30rem, 60vh, 50rem);
     max-width: 90%;
   }
   .swiper-button-next::after,
@@ -870,8 +873,8 @@ banner slider starts
       font-size: 56px;
     }
   }
-  .swiper-slide .card {
-    min-width: 80vw;
+  .testimonials-section_container .swiper-slide .card {
+    height: clamp(30rem, 60vh, 40rem);
     .card-content {
       width: 100%;
     }

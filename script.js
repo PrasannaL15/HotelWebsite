@@ -11,9 +11,14 @@ $(document).ready(function () {
 
   $(window).scroll(function () {
     if ($(document).scrollTop() > 50) {
+      if (window.innerWidth < 1024) {
+        $(".navbar-burger").show();
+      }
       $("nav").removeClass("transparent");
     } else {
       $("nav").addClass("transparent");
+
+      $(".navbar-burger").hide();
     }
   });
 
