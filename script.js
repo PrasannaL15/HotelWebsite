@@ -168,6 +168,7 @@ async function initiateBulmaCalender() {
 
     labelFrom: "Check-In",
     labelTo: "Check-Out",
+    dateFormat: "dd/MM/yyyy",
     minDate: new Date(),
   };
   var calendars = bulmaCalendar.attach('[type="date"]', options);
