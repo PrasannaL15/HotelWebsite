@@ -9,6 +9,8 @@ body {
 
 // Set your brand colors
 $border-radius: 10px;
+$whatsappColor: #43c554;
+
 $purple: hsl(0, 0%, 21%);
 $pink: #5c48cf;
 $brown: hsl(0, 0%, 21%);
@@ -330,7 +332,7 @@ banner slider starts
     margin: 50px 10px;
     width: 80%;
     align-items: center;
-    height: clamp(25rem, 30vh, 30rem);
+    height: clamp(30rem, 30vh, 40rem);
     display: grid;
     grid-template-areas: "main main";
     gap: 10px;
@@ -349,7 +351,7 @@ banner slider starts
       "other other";
     gap: 10px;
   }
-  .palces-card {
+  .places-card {
     height: 100%;
     position: relative;
     text-align: left;
@@ -383,13 +385,13 @@ banner slider starts
   // .places-card-main {
   //   grid-area: "main";
   // }
-  .palces-card:hover img {
+  .places-card:hover img {
     filter: brightness(30%);
   }
-  .palces-card:hover .places-card-title {
+  .places-card:hover .places-card-title {
     font-size: 30px;
   }
-  .palces-card:hover .content-overlay {
+  .places-card:hover .content-overlay {
     transform: translate(-50%, -50%);
   }
   @media only screen and (max-width: 768px) {
@@ -563,7 +565,7 @@ banner slider starts
       }
     }
     .contact-block {
-      background-color: #25d366;
+      background-color: $whatsappColor;
       border-radius: $border-radius;
       padding: 10px;
       color: white;
@@ -729,15 +731,51 @@ banner slider starts
   z-index: 1000;
   position: fixed;
   height: 100px;
-  width: 100px;
+  width: 110px;
   filter: drop-shadow(10px 10px 10px rgb(0, 0, 0));
-  bottom: 20px;
+  bottom: 45px;
   margin-right: 20px;
   margin-left: auto;
   left: 0px;
   right: 0px;
+  animation: tilt-n-move-shaking 1s infinite;
+
+  @keyframes tilt-n-move-shaking {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+      transform: translate(5px, 10px) rotate(5deg);
+    }
+    50% {
+      transform: translate(0, 0) rotate(0eg);
+    }
+    75% {
+      transform: translate(-5px, 5px) rotate(-5deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
   img {
     height: 100px;
+  }
+  p {
+    text-align: center;
+
+    transform: translateY(-10px);
+    background-color: $whatsappColor;
+    color: white;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
   }
 }
 
@@ -881,13 +919,16 @@ banner slider starts
   }
 
   .whatsappDiv {
-    height: 70px;
-    width: 70px;
-    bottom: 15px;
-    margin-right: 15px;
+    height: 80px;
+    width: 80px;
+
     margin-left: auto;
     left: 0px;
     right: 0px;
+    p {
+      font-size: 12px;
+      padding: 4px 4px;
+    }
     img {
       height: 70px;
     }

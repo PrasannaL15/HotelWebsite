@@ -9787,7 +9787,7 @@ banner slider starts
   margin: 50px 10px;
   width: 80%;
   align-items: center;
-  height: clamp(25rem, 30vh, 30rem);
+  height: clamp(30rem, 30vh, 40rem);
   display: grid;
   grid-template-areas: "main main";
   gap: 10px;
@@ -9803,41 +9803,41 @@ banner slider starts
   grid-template-areas: "other other" "other other";
   gap: 10px;
 }
-.places-section .palces-card {
+.places-section .places-card {
   height: 100%;
   position: relative;
   text-align: left;
   transition: all 1s;
 }
-.places-section .palces-card img {
+.places-section .places-card img {
   background-size: cover;
   height: 100%;
   filter: brightness(50%);
   transition: all 1s;
 }
-.places-section .palces-card .places-card-description {
+.places-section .places-card .places-card-description {
   width: 100%;
   padding: 5px;
   transition: all 1s;
 }
-.places-section .palces-card .places-card-title {
+.places-section .places-card .places-card-title {
   color: white;
   font-size: 26px;
 }
-.places-section .palces-card .places-card-subtitle {
+.places-section .places-card .places-card-subtitle {
   color: white;
   font-size: 12px;
 }
-.places-section .palces-card .content-overlay {
+.places-section .places-card .content-overlay {
   transform: translate(-50%, -20%);
 }
-.places-section .palces-card:hover img {
+.places-section .places-card:hover img {
   filter: brightness(30%);
 }
-.places-section .palces-card:hover .places-card-title {
+.places-section .places-card:hover .places-card-title {
   font-size: 30px;
 }
-.places-section .palces-card:hover .content-overlay {
+.places-section .places-card:hover .content-overlay {
   transform: translate(-50%, -50%);
 }
 @media only screen and (max-width: 768px) {
@@ -9991,7 +9991,7 @@ banner slider starts
   border-radius: 4px;
 }
 .contact-section .booking-part .contact-block {
-  background-color: #25d366;
+  background-color: #43c554;
   border-radius: 10px;
   padding: 10px;
   color: white;
@@ -10035,16 +10035,50 @@ banner slider starts
   z-index: 1000;
   position: fixed;
   height: 100px;
-  width: 100px;
+  width: 110px;
   filter: drop-shadow(10px 10px 10px rgb(0, 0, 0));
-  bottom: 20px;
+  bottom: 45px;
   margin-right: 20px;
   margin-left: auto;
   left: 0px;
   right: 0px;
+  animation: tilt-n-move-shaking 1s infinite;
+}
+@keyframes tilt-n-move-shaking {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(5px, 10px) rotate(5deg);
+  }
+  50% {
+    transform: translate(0, 0) rotate(0eg);
+  }
+  75% {
+    transform: translate(-5px, 5px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+.whatsappDiv a {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
 }
 .whatsappDiv img {
   height: 100px;
+}
+.whatsappDiv p {
+  text-align: center;
+  transform: translateY(-10px);
+  background-color: #43c554;
+  color: white;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10px;
 }
 
 @-webkit-keyframes wobble-vertical-on-hover {
@@ -10180,13 +10214,15 @@ banner slider starts
     width: 100%;
   }
   .whatsappDiv {
-    height: 70px;
-    width: 70px;
-    bottom: 15px;
-    margin-right: 15px;
+    height: 80px;
+    width: 80px;
     margin-left: auto;
     left: 0px;
     right: 0px;
+  }
+  .whatsappDiv p {
+    font-size: 12px;
+    padding: 4px 4px;
   }
   .whatsappDiv img {
     height: 70px;

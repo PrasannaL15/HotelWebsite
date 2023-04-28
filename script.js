@@ -39,7 +39,11 @@ $(document).ready(function () {
   });
 
   $(".video-play-btn").click(() => {
-    $(".modal iframe").attr("src", "https://www.youtube.com/embed/A-yYTkfrHR0");
+    var videoCode = "h9Rl0ChasOY";
+    $(".modal iframe").attr(
+      "src",
+      "https://www.youtube.com/embed/" + videoCode + ""
+    );
     $(".modal").addClass("is-active");
     console.log("clicked");
   });
@@ -182,6 +186,14 @@ $(document).ready(function () {
   }
 
   /*  Booking section ends    */
+  $(".whatsappDiv").click(() => {
+    $("html, body").animate(
+      {
+        scrollTop: $(".contact-section").offset().top,
+      },
+      1000
+    );
+  });
 
   $("#bookingSubmitbtn").click(function (e) {
     whatsAppBooking();
