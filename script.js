@@ -198,18 +198,18 @@ function whatsAppBooking() {
   } else {
     messagetext =
       `Hey...
-    I am Intrested in booking Villa @SeaFans!
-    Dates - ` +
+    I am Intrested in booking Villa *@SeaFans*!
+
+*Dates* - ` +
       $("#dateSelect").val() +
       `
-    Rooms - ` +
+*Rooms* - ` +
       $("#rooms").val() +
       `
-    Adults -` +
+*Adults* -` +
       $("#adults").val() +
       `
-    Kids - 
-      ` +
+*Kids* -` +
       $("#kids").val() +
       ``;
     htmlLink = "https://wa.me/919834069861?text=" + encodeURI(messagetext) + "";
