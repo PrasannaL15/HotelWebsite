@@ -72,7 +72,7 @@ $(document).ready(function () {
 
     const triggerAnimation = () => {
       const scrollHeight = window.pageYOffset + 200;
-      console.log("scrollHeight offset ", scrollHeight);
+      //console.log("scrollHeight offset ", scrollHeight);
       if (scrollHeight >= blockOffset) {
         block.classList.add("flyIn");
         window.removeEventListener("scroll", triggerAnimation);
@@ -191,6 +191,15 @@ $(document).ready(function () {
       {
         scrollTop:
           $(".booking-part").offset().top - ($(".navbar ").height() + 50),
+      },
+      1000
+    );
+  });
+
+  $(".mouse-icon").click(() => {
+    $("html, body").animate(
+      {
+        scrollTop: $("#intro").offset().top - 77,
       },
       1000
     );

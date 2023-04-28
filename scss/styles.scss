@@ -35,6 +35,9 @@ $input-shadow: none;
 
 @import "../mybulma/bulma-0.9.4/bulma/bulma.sass";
 
+.prevent-select {
+  user-select: none;
+}
 img {
   border-radius: $border-radius;
 }
@@ -106,6 +109,55 @@ nav.navbar.transparent {
     height: 50%;
     background-color: red;
   }
+  .banner-div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      color: $secondary;
+      font-size: clamp(0.5rem, 10vw, 5rem);
+
+      text-shadow: 1px 1px 2px #000, 0 0 25px #000, 0 0 5px #000;
+    }
+  }
+}
+.mouse-icon {
+  box-sizing: border-box;
+  width: 25px;
+  height: 45px;
+  border: 2px solid white;
+  border-radius: 15px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+}
+.mouse-wheel {
+  height: 6px;
+  margin: 2px auto 0;
+  display: block;
+  width: 3px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-animation: 1.6s ease infinite wheel-up-down;
+  -moz-animation: 1.6s ease infinite wheel-up-down;
+  animation: 1.6s ease infinite wheel-up-down;
+}
+
+@keyframes wheel-up-down {
+  0% {
+    margin-top: 2px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: 20px;
+    opacity: 0;
+  }
 }
 
 /*
@@ -143,25 +195,25 @@ banner slider starts
   object-fit: cover;
 }
 
-.slide_1 {
-  background-color: #643ca3;
-}
+// .slide_1 {
+//   background-color: #643ca3;
+// }
 
-.slide_2 {
-  background-color: #e38364;
-}
+// .slide_2 {
+//   background-color: #e38364;
+// }
 
-.slide_3 {
-  background-color: #faf47a;
-}
+// .slide_3 {
+//   background-color: #faf47a;
+// }
 
-.slide_4 {
-  background-color: #64e3c1;
-}
+// .slide_4 {
+//   background-color: #64e3c1;
+// }
 
-.slide_5 {
-  background-color: #9e6ffd;
-}
+// .slide_5 {
+//   background-color: #9e6ffd;
+// }
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -806,7 +858,7 @@ footer {
   }
 
   .whatsappDiv {
-    height: 80px;
+    height: 90px;
     width: 80px;
 
     margin-left: auto;
