@@ -10154,6 +10154,10 @@ banner slider starts
   animation-iteration-count: 1;
 }
 
+footer {
+  height: clamp(20rem, 30vh, 40rem);
+}
+
 @media only screen and (max-width: 768px) {
   .navbar-link::after {
     display: none;

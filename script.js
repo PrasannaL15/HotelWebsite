@@ -189,7 +189,8 @@ $(document).ready(function () {
   $(".whatsappDiv").click(() => {
     $("html, body").animate(
       {
-        scrollTop: $(".contact-section").offset().top,
+        scrollTop:
+          $(".booking-part").offset().top - ($(".navbar ").height() + 50),
       },
       1000
     );
