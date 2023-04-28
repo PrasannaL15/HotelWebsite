@@ -191,23 +191,27 @@ function whatsAppBooking() {
   if (
     $("#dateSelect").val() == "" ||
     $("#adults").val() == "" ||
-    $("#kids").val() == ""
+    $("#kids").val() == "" ||
+    $("#rooms").val() == ""
   ) {
     alert("Please Enter All The Details To Enquire");
   } else {
     messagetext =
-      `Hey I am Intrested in booking Villa!
-      Dates - ` +
+      `Hey...
+    I am Intrested in booking Villa @SeaFans!
+    Dates - ` +
       $("#dateSelect").val() +
       `
-      Rooms - ` +
+    Rooms - ` +
+      $("#rooms").val() +
+      `
+    Adults -` +
       $("#adults").val() +
       `
-      Adults -` +
+    Kids - 
+      ` +
       $("#kids").val() +
-      `
-      Kids - 
-      `;
+      ``;
     htmlLink = "https://wa.me/919834069861?text=" + encodeURI(messagetext) + "";
     window.open(htmlLink, (target = "_blank"));
   }
