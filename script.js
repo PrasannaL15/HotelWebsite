@@ -159,7 +159,7 @@ $(document).ready(function () {
         <div class="media">
           <div class="media-left">
             <figure class="image is-96x96">
-              <img
+              <img loading="lazy"
                 src="Images/Testimony/` +
       element.imageName +
       `"
@@ -181,7 +181,7 @@ $(document).ready(function () {
         <div class="review"> ` +
       element.review +
       `
-      </div><br><br><time datetime="2016-1-1">` +
+      </div><br><time datetime="2016-1-1">` +
       element.date +
       `</time>
         </div>
