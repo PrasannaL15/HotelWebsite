@@ -9982,6 +9982,11 @@ banner slider starts
 .contact-section .booking-part .details-block div {
   width: 95px;
 }
+.contact-section .booking-part .details-block div select,
+.contact-section .booking-part .details-block div input {
+  border-color: #dbdbdb;
+  border-radius: 4px;
+}
 .contact-section .booking-part .contact-block {
   background-color: #25d366;
   border-radius: 10px;
@@ -9989,6 +9994,7 @@ banner slider starts
   color: white;
   cursor: pointer;
   margin-top: 20px;
+  font-size: 1em;
 }
 .contact-section .map {
   height: clamp(20rem, 70vh, 30rem);

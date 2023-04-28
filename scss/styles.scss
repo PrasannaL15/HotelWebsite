@@ -552,6 +552,11 @@ banner slider starts
       gap: 10px;
       div {
         width: 95px;
+        select,
+        input {
+          border-color: #dbdbdb;
+          border-radius: 4px;
+        }
       }
     }
     .contact-block {
@@ -561,6 +566,7 @@ banner slider starts
       color: white;
       cursor: pointer;
       margin-top: 20px;
+      font-size: 1em;
     }
   }
   .map {
