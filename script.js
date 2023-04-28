@@ -198,7 +198,8 @@ function whatsAppBooking() {
   } else {
     messagetext =
       `Hey...
-    I am Intrested in booking Villa *@SeaFans*!
+
+I am Intrested in booking Villa *@SeaFans*!
 
 *Dates* - ` +
       $("#dateSelect").val() +
