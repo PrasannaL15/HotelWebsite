@@ -188,13 +188,20 @@ function whatsAppBooking() {
 
   console.log($("#dateSelect").val());
 
+  var adults = $("#adults").val();
+  var kids = $("#kids").val();
+  var rooms = $("#rooms").val();
   if (
     $("#dateSelect").val() == "" ||
-    $("#adults").val() == "" ||
-    $("#kids").val() == "" ||
-    $("#rooms").val() == ""
+    adults == "" ||
+    kids == "" ||
+    rooms == ""
   ) {
     alert("Please Enter All The Details To Enquire");
+  } else if (isNaN(adults) || isNaN(kids) || isNaN(rooms)) {
+    alert(
+      "Rooms, Adults and Kids values should be a number. Please enter correct values"
+    );
   } else {
     messagetext =
       `Hey...
@@ -205,13 +212,13 @@ I am Intrested in booking Villa *@SeaFans*!
       $("#dateSelect").val() +
       `
 *Rooms* - ` +
-      $("#rooms").val() +
+      rooms +
       `
 *Adults* -` +
-      $("#adults").val() +
+      adults +
       `
 *Kids* -` +
-      $("#kids").val() +
+      kids +
       ``;
     htmlLink = "https://wa.me/919834069861?text=" + encodeURI(messagetext) + "";
     window.open(htmlLink, (target = "_blank"));
