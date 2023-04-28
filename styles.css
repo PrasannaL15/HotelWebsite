@@ -9679,7 +9679,7 @@ banner slider starts
 }
 
 .view_div {
-  max-width: 60vh;
+  max-width: clamp(25rem, 60vw, 86rem);
   grid-area: "a";
   position: relative;
   color: white;
@@ -9786,7 +9786,7 @@ banner slider starts
   margin: 50px 10px;
   width: 80%;
   align-items: center;
-  height: clamp(25rem, 50vh, 30rem);
+  height: clamp(25rem, 30vh, 30rem);
   display: grid;
   grid-template-areas: "main main";
   gap: 10px;
@@ -10128,7 +10128,7 @@ banner slider starts
   .contact-section .map,
   .contact-form {
     width: 100%;
-    max-width: 90vw;
+    max-width: 80vw;
   }
   .contact-section .contact-section_container {
     flex-direction: column;
