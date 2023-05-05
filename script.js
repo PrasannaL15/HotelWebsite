@@ -248,7 +248,7 @@ async function addTestimonials() {
       If you're looking for a peaceful and beautiful place to stay in the area, this is definitely a try.`,
     },
   ];
-  var testimonialCard;
+  var testimonialCard = "";
   testimonials.forEach((element) => {
     testimonialCard +=
       ` <div class="swiper-slide">
@@ -294,6 +294,7 @@ async function addTestimonials() {
     lazy: true,
     loop: true,
     autoplay: true,
+    centeredSlides: true,
     slidesPerView: 1,
     pagination: {
       el: ".swiper-pagination",

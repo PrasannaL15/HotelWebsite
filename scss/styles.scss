@@ -402,10 +402,11 @@ banner slider starts
   }
   .places-grid {
     position: relative;
+    aspect-ratio: 14/4.5;
     margin: 50px 10px;
-    width: 80%;
+    width: 90%;
     align-items: center;
-    height: clamp(30rem, 30vh, 40rem);
+    //height: clamp(30rem, 30vh, 40rem);
     display: grid;
     grid-template-areas: "main main";
     gap: 10px;
@@ -445,7 +446,7 @@ banner slider starts
 
     .places-card-title {
       color: $secondary;
-      font-size: 26px;
+      font-size: clamp(15px, 1.2vw, 32px);
     }
     .places-card-subtitle {
       color: $secondary;
@@ -462,7 +463,7 @@ banner slider starts
     filter: brightness(30%);
   }
   .places-card:hover .places-card-title {
-    font-size: 30px;
+    font-size: clamp(15px, 2.2vw, 48px);
   }
   .places-card:hover .content-overlay {
     transform: translate(-50%, -50%);
