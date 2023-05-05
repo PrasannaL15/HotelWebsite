@@ -217,7 +217,7 @@ async function addTestimonials() {
     },
 
     {
-      imageName: "Niraj.webp",
+      imageName: "niraj.webp",
       name: "Niraj Dodake",
       Nationality: "India",
       designation: "Doctor",
