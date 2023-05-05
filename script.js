@@ -248,9 +248,9 @@ async function addTestimonials() {
       If you're looking for a peaceful and beautiful place to stay in the area, this is definitely a try.`,
     },
   ];
-
+  var testimonialCard;
   testimonials.forEach((element) => {
-    var testimonialCard =
+    testimonialCard +=
       ` <div class="swiper-slide">
     <div class="card">
       <div class="card-content">
@@ -287,9 +287,8 @@ async function addTestimonials() {
     </div>
   </div>`;
     console.log("testimonials");
-    $(".testimonialsSwiper .swiper-wrapper").append(testimonialCard);
   });
-
+  $(".testimonialsSwiper .swiper-wrapper").append(testimonialCard);
   //Initialize swiper
   let testimonialSwiper = new Swiper(".testimonialsSwiper", {
     lazy: true,
