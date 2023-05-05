@@ -39,6 +39,7 @@ $(document).ready(function () {
     },
   });
 
+  $(".banner-div p").show();
   async function youtubeModalHandle() {
     $(".video-play-btn").click(() => {
       var videoCode = "h9Rl0ChasOY";
