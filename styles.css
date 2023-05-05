@@ -10213,7 +10213,22 @@ banner slider starts
 }
 
 footer {
-  height: clamp(20rem, 30vh, 40rem);
+  height: clamp(3em, 10vh, 40rem) !important;
+  padding: 5px 0 !important;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+footer .footer-img {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+footer img {
+  height: clamp(3rem, 10vh, 40rem);
+  position: absolute;
 }
 
 @media only screen and (max-width: 768px) {

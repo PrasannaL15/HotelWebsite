@@ -222,7 +222,7 @@ async function addTestimonials() {
       imageName: "niraj.webp",
       name: "Niraj Dodake",
       Nationality: "India",
-      designation: "Doctor",
+      designation: "Booking.com",
       review: `The stay at sea nest was awesome! The property that you have built is simply perfect! Would like to mention the minute details that you have kept in mind! Be it the kitchen with all the groceries or the number of coldrinks,eggs or butter you have kept inside the refrigerator! The packs of Maggi everything was just superb!<br>
 
       The dinning table,sofa and the cleanliness,the ample doormats that you have kept everything was very thoughtful!<br>
