@@ -10,6 +10,7 @@ $(document).ready(function () {
   console.log("Hello");
 
   $(window).scroll(function () {
+    $(".navbar-burger").hide();
     if ($(document).scrollTop() > 50) {
       if (window.innerWidth < 1024) {
         $(".navbar-burger").show();
