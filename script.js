@@ -28,7 +28,7 @@ $(document).ready(function () {
     lazy: true,
     loop: true,
     effect: "fade",
-    autoplay: true,
+    autoplay: false,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
