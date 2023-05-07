@@ -13,7 +13,7 @@ $(document).ready(function () {
     $(".navbar-burger").hide();
     if ($(document).scrollTop() > 50) {
       if (window.innerWidth < 1024) {
-        $(".navbar-burger").show();
+        // $(".navbar-burger").show();
       }
       $("nav").removeClass("transparent");
     } else {
