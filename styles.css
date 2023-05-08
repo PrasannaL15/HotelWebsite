@@ -9862,16 +9862,18 @@ banner slider starts
   gap: 10px;
 }
 .places-section .places-card {
-  height: 100%;
+  height: clamp(10rem, 22vh, 30rem);
   position: relative;
   text-align: left;
   transition: all 1s;
 }
 .places-section .places-card img {
   background-size: cover;
-  height: 100%;
   filter: brightness(50%);
   transition: all 1s;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .places-section .places-card .places-card-description {
   width: 100%;
