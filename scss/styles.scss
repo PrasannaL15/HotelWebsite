@@ -360,6 +360,7 @@ banner slider starts
       }
       .review {
         max-height: clamp(7rem, 30vh, 40rem);
+        min-height:  clamp(7rem, 30vh, 40rem);
         overflow-y: auto;
       }
     }
