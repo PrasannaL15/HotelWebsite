@@ -9862,7 +9862,7 @@ banner slider starts
   gap: 10px;
 }
 .places-section .places-card {
-  height: clamp(10rem, 22vh, 30rem);
+  height: 100%;
   position: relative;
   text-align: left;
   transition: all 1s;
@@ -9907,6 +9907,9 @@ banner slider starts
   }
   .places-section .places-grid-other {
     grid-template-areas: "other" "other" "other" "other";
+  }
+  .places-section .places-card {
+    height: clamp(10rem, 22vh, 30rem);
   }
   .places-section .places-card-title {
     color: white;
