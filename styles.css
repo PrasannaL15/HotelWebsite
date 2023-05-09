@@ -9939,6 +9939,7 @@ banner slider starts
 }
 .video-section .video-part {
   flex-grow: 1;
+  flex-shrink: 1;
   position: relative;
 }
 .video-section .video-part img {
@@ -9966,21 +9967,52 @@ banner slider starts
   transition: all 1s;
 }
 .video-section .info-part {
-  flex-grow: 1;
+  flex-grow: 0.5;
+  flex-shrink: 1.5;
   flex-direction: column;
   display: flex;
   align-items: center;
 }
 .video-section .info-part .title {
   font-size: 56px;
-  padding: 30px 0;
+  padding: 20px 0;
   text-align: center;
 }
 .video-section .info-part .subtitle {
   text-align: center;
   font-size: 15px;
   padding: 20px 30px;
-  max-width: 1200px;
+  padding-top: 0px;
+  width: 40vw;
+}
+.video-section .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 15px;
+  padding: 10px;
+}
+.video-section .item {
+  background-color: rgba(240, 240, 240, 0.5294117647);
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: auto;
+  padding: 15px !important;
+}
+.video-section .item h3 {
+  font-size: 1.3rem;
+  color: black;
+  padding: 5px;
+}
+.video-section .icon {
+  font-size: 48px;
+  width: auto;
+}
+.video-section .icon img {
+  height: 36px;
+  width: 36px;
+  font-size: 5px;
 }
 
 .modal {
@@ -10221,7 +10253,7 @@ banner slider starts
 }
 
 footer {
-  height: clamp(3em, 10vh, 40rem) !important;
+  height: clamp(5em, 5vh, 40rem) !important;
   padding: 5px 0 !important;
   margin: auto;
   display: flex;
@@ -10257,17 +10289,27 @@ footer img {
 .social-media ul {
   list-style: none;
   padding: 0;
+  padding-top: 10px;
 }
 
 .social-media li {
   display: inline-block;
   margin: 10px;
+  transition: all 0.4s ease;
 }
 
-.social-media img {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
+.social-media li:hover img {
+  transform: scale(1.1);
+  transition: all 0.4s ease;
+}
+
+.social-media a {
+  display: block;
+  height: auto;
+}
+.social-media a img {
+  border-radius: 0;
+  height: 42px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -10345,6 +10387,39 @@ footer img {
   }
   .contact-section .booking-part p {
     font-size: 24;
+  }
+  .video-section .info-part .subtitle {
+    width: 100%;
+    padding: 10px 5px;
+  }
+  .video-section .video-section_container div {
+    padding: 20px;
+  }
+  .video-section .video-section_container .container {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    padding: 0;
+  }
+  .video-section .video-section_container .container .item {
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .video-section .video-section_container {
+    flex-direction: column;
+  }
+  .video-section .info-part .subtitle {
+    width: 100%;
+    padding: 10px 5px;
+  }
+  .video-section .video-section_container div {
+    padding: 20px;
+  }
+  .video-section .video-section_container .container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 0;
+  }
+  .video-section .video-section_container .container .item {
+    padding: 10px;
   }
 }
 
