@@ -146,7 +146,7 @@ function whatsAppBooking() {
     messagetext =
       `Hey...
 
-I am Intrested in booking Villa *@SeaFans*!
+I am Intrested in booking Villa *@ Sea Nest*!
 
 *Dates* - ` +
       $("#dateSelect").val() +
