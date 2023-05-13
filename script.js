@@ -164,15 +164,113 @@ I am Intrested in booking Villa *@ Sea Nest*!
     window.open(htmlLink, (target = "_blank"));
   }
 }
-async function initiateBulmaCalender() {
-  options = {
-    isRange: "true",
 
-    labelFrom: "Check-In",
-    labelTo: "Check-Out",
-    dateFormat: "dd/MM/yyyy",
-    minDate: new Date(),
-  };
+
+async function getBookedDates(){
+  const airbnb = 'https://www.airbnb.co.in/calendar/ical/761883737147586140.ics?s=7c7b809a4ec75c27065573fefa5f8058';
+  const bookingdotcom  = 'https://admin.booking.com/hotel/hoteladmin/ical.html?t=ab7b1163-3c93-4179-887c-33e834750da7'
+  const proxyUrl = 'https://api.allorigins.win/raw?url=' ;
+  
+  
+  var getDaysArray = function(s,e) {for(var a=[],d=new Date(s);d<=new Date(e);d.setDate(d.getDate()+1)){ a.push(new Date(d));}return a;};
+  
+ var bookeddate1 =  await fetch(proxyUrl + encodeURIComponent(airbnb))
+ .then(response => response.text())
+ .then(data => {
+   const jcalData = ICAL.parse(data);
+   const vcalendar = new ICAL.Component(jcalData);
+   const vevent = vcalendar.getAllSubcomponents('vevent');
+   const dates = vevent.map(event => {
+     return {
+       start: event.getFirstPropertyValue('dtstart').toJSDate(),
+       end: event.getFirstPropertyValue('dtend').toJSDate()
+     }
+   });
+  //  for (daterange in dates){
+   outputArray = []
+    // console.log(dates);
+   dates.forEach(function (item, index) {
+    //console.log(item, index);
+    var daylist = getDaysArray(item.start,item.end-1);
+    //console.log(daylist);
+    outputArray = outputArray.concat(daylist)
+    
+  });
+  //  }
+  return outputArray
+  //console.log(outputArray,"         dds")
+   
+ })
+ .catch(error => console.log(error));
+
+
+
+
+
+ var bookeddate2 =  await fetch(proxyUrl + encodeURIComponent(bookingdotcom))
+ .then(response => response.text())
+ .then(data => {
+ // console.log(data)
+   const jcalData = ICAL.parse(data);
+   const vcalendar = new ICAL.Component(jcalData);
+   const vevent = vcalendar.getAllSubcomponents('vevent');
+   const dates = vevent.map(event => {
+     return {
+       start: event.getFirstPropertyValue('dtstart').toJSDate(),
+       end: event.getFirstPropertyValue('dtend').toJSDate()
+     }
+   });
+  //  for (daterange in dates){
+   outputArray = []
+    // console.log(dates);
+   dates.forEach(function (item, index) {
+    //console.log(item, index);
+    var daylist = getDaysArray(item.start,item.end-1);
+    //console.log(daylist);
+    outputArray = outputArray.concat(daylist)
+   
+  });
+  //  }
+  //console.log(outputArray,"         dds")
+  return outputArray
+ })
+ .catch(error => console.log(error));
+
+
+ freezeDates = bookeddate1.concat(bookeddate2)
+ //console.log(freezeDates,"                  datess ")
+
+return freezeDates
+
+}
+
+async function initiateBulmaCalender() {
+  try{
+  var freezeddates = await getBookedDates();
+} catch(e){
+  console.log(e);
+}
+
+
+options = {
+  isRange: "true",
+  disabledDates:freezeddates,
+  labelFrom: "Check-In",
+  labelTo: "Check-Out",
+  dateFormat: "dd/MM/yyyy",
+  minDate: new Date(),
+};
+  if(freezeddates == undefined){
+    options = {
+      isRange: "true",
+    
+      labelFrom: "Check-In",
+      labelTo: "Check-Out",
+      dateFormat: "dd/MM/yyyy",
+      minDate: new Date(),
+    };
+  }
+
   var calendars = bulmaCalendar.attach('[type="date"]', options);
 
   // Loop on each calendar initialized
