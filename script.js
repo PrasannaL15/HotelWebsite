@@ -129,19 +129,19 @@ function whatsAppBooking() {
   console.log($("#dateSelect").val());
 
   var adults = $("#adults").val();
-  var kids = $("#kids").val();
-  var rooms = $("#rooms").val();
+  // var kids = $("#kids").val();
+  // var rooms = $("#rooms").val();
 
   if (
     $("#dateSelect").val() == "" ||
-    adults == "" ||
-    kids == "" ||
-    rooms == ""
+    adults == ""
+    // kids == "" ||
+    // rooms == ""
   ) {
     alert("Please Enter All The Details To Enquire");
-  } else if (isNaN(adults) || isNaN(kids) || isNaN(rooms)) {
+  } else if (isNaN(adults)) {
     alert(
-      "Rooms, Adults and Kids values should be a number. Please enter correct values"
+      "Adults should be a number. Please enter correct values"
     );
   } else {
     messagetext =
@@ -152,154 +152,148 @@ I am Intrested in booking Villa *@ Sea Nest*!
 *Dates* - ` +
       $("#dateSelect").val() +
       `
-*Rooms* - ` +
-      rooms +
-      `
 *Adults* -` +
       adults +
-      `
-*Kids* -` +
-      kids +
       ``;
 
-    isFormCompleted  = true;  
+    isFormCompleted = true;
     htmlLink = "https://wa.me/919834069861?text=" + encodeURI(messagetext) + "";
     window.open(htmlLink, (target = "_blank"));
   }
 }
 
 
-async function getBookedDates(){
+async function getBookedDates() {
   const airbnb = 'https://www.airbnb.co.in/calendar/ical/761883737147586140.ics?s=7c7b809a4ec75c27065573fefa5f8058';
-  const bookingdotcom  = 'https://admin.booking.com/hotel/hoteladmin/ical.html?t=ab7b1163-3c93-4179-887c-33e834750da7'
+  const bookingdotcom = 'https://admin.booking.com/hotel/hoteladmin/ical.html?t=ab7b1163-3c93-4179-887c-33e834750da7'
   const makemytrip = 'https://ingoibibo-prod.s3-ap-south-1.amazonaws.com/91b914049c5750c8d7b983a5b3e5189e.ics'
-  const proxyUrl = 'https://api.allorigins.win/raw?url=' ;
-  
-  
-  var getDaysArray = function(s,e) {for(var a=[],d=new Date(s);d<=new Date(e);d.setDate(d.getDate()+1)){ a.push(new Date(d));}return a;};
-  
- var bookeddates1 =  await fetch(proxyUrl + encodeURIComponent(airbnb))
- .then(response => response.text())
- .then(data => {
-   const jcalData = ICAL.parse(data);
-   const vcalendar = new ICAL.Component(jcalData);
-   const vevent = vcalendar.getAllSubcomponents('vevent');
-   const dates = vevent.map(event => {
-     return {
-       start: event.getFirstPropertyValue('dtstart').toJSDate(),
-       end: event.getFirstPropertyValue('dtend').toJSDate()
-     }
-   });
-  //  for (daterange in dates){
-   outputArray = []
-    // console.log(dates);
-   dates.forEach(function (item, index) {
-    //console.log(item, index);
-    var daylist = getDaysArray(item.start,item.end-1);
-    //console.log(daylist);
-    outputArray = outputArray.concat(daylist)
-    
-  });
-  //  }
-  return outputArray
-  //console.log(outputArray,"         dds")
-   
- })
- .catch(error => console.log(error));
+  const proxyUrl = 'https://api.allorigins.win/raw?url=';
+
+
+  var getDaysArray = function (s, e) { for (var a = [], d = new Date(s); d <= new Date(e); d.setDate(d.getDate() + 1)) { a.push(new Date(d)); } return a; };
+
+  var bookeddates1 = await fetch(proxyUrl + encodeURIComponent(airbnb))
+    .then(response => response.text())
+    .then(data => {
+      const jcalData = ICAL.parse(data);
+      const vcalendar = new ICAL.Component(jcalData);
+      const vevent = vcalendar.getAllSubcomponents('vevent');
+      const dates = vevent.map(event => {
+        return {
+          start: event.getFirstPropertyValue('dtstart').toJSDate(),
+          end: event.getFirstPropertyValue('dtend').toJSDate()
+        }
+      });
+      //  for (daterange in dates){
+      outputArray = []
+      // console.log(dates);
+      dates.forEach(function (item, index) {
+        //console.log(item, index);
+        var daylist = getDaysArray(item.start, item.end - 1);
+        //console.log(daylist);
+        outputArray = outputArray.concat(daylist)
+
+      });
+      //  }
+      return outputArray
+      //console.log(outputArray,"         dds")
+
+    })
+    .catch(error => console.log(error));
 
 
 
 
 
- var bookeddates2 =  await fetch(proxyUrl + encodeURIComponent(bookingdotcom))
- .then(response => response.text())
- .then(data => {
- // console.log(data)
-   const jcalData = ICAL.parse(data);
-   const vcalendar = new ICAL.Component(jcalData);
-   const vevent = vcalendar.getAllSubcomponents('vevent');
-   const dates = vevent.map(event => {
-     return {
-       start: event.getFirstPropertyValue('dtstart').toJSDate(),
-       end: event.getFirstPropertyValue('dtend').toJSDate()
-     }
-   });
-  //  for (daterange in dates){
-   outputArray = []
-    // console.log(dates);
-   dates.forEach(function (item, index) {
-    //console.log(item, index);
-    var daylist = getDaysArray(item.start,item.end-1);
-    //console.log(daylist);
-    outputArray = outputArray.concat(daylist)
-   
-  });
-  //  }
-  //console.log(outputArray,"         dds")
-  return outputArray
- })
- .catch(error => console.log(error));
+  var bookeddates2 = await fetch(proxyUrl + encodeURIComponent(bookingdotcom))
+    .then(response => response.text())
+    .then(data => {
+      // console.log(data)
+      const jcalData = ICAL.parse(data);
+      const vcalendar = new ICAL.Component(jcalData);
+      const vevent = vcalendar.getAllSubcomponents('vevent');
+      const dates = vevent.map(event => {
+        return {
+          start: event.getFirstPropertyValue('dtstart').toJSDate(),
+          end: event.getFirstPropertyValue('dtend').toJSDate()
+        }
+      });
+      //  for (daterange in dates){
+      outputArray = []
+      // console.log(dates);
+      dates.forEach(function (item, index) {
+        //console.log(item, index);
+        var daylist = getDaysArray(item.start, item.end - 1);
+        //console.log(daylist);
+        outputArray = outputArray.concat(daylist)
 
- var bookeddates3 =  await fetch(proxyUrl + encodeURIComponent(makemytrip))
- .then(response => response.text())
- .then(data => {
-   const jcalData = ICAL.parse(data);
-   const vcalendar = new ICAL.Component(jcalData);
-   const vevent = vcalendar.getAllSubcomponents('vevent');
-   const dates = vevent.map(event => {
-     return {
-       start: event.getFirstPropertyValue('dtstart').toJSDate(),
-       end: event.getFirstPropertyValue('dtend').toJSDate()
-     }
-   });
-  //  for (daterange in dates){
-   outputArray = []
-    // console.log(dates);
-   dates.forEach(function (item, index) {
-    //console.log(item, index);
-    var daylist = getDaysArray(item.start,item.end-1);
-    //console.log(daylist);
-    outputArray = outputArray.concat(daylist)
-    
-  });
-  //  }
-  return outputArray
-  //console.log(outputArray,"         dds")
-   
- })
- .catch(error => console.log(error));
+      });
+      //  }
+      //console.log(outputArray,"         dds")
+      return outputArray
+    })
+    .catch(error => console.log(error));
 
-// console.log(bookeddates3)
+  var bookeddates3 = await fetch(proxyUrl + encodeURIComponent(makemytrip))
+    .then(response => response.text())
+    .then(data => {
+      const jcalData = ICAL.parse(data);
+      const vcalendar = new ICAL.Component(jcalData);
+      const vevent = vcalendar.getAllSubcomponents('vevent');
+      const dates = vevent.map(event => {
+        return {
+          start: event.getFirstPropertyValue('dtstart').toJSDate(),
+          end: event.getFirstPropertyValue('dtend').toJSDate()
+        }
+      });
+      //  for (daterange in dates){
+      outputArray = []
+      // console.log(dates);
+      dates.forEach(function (item, index) {
+        //console.log(item, index);
+        var daylist = getDaysArray(item.start, item.end - 1);
+        //console.log(daylist);
+        outputArray = outputArray.concat(daylist)
+
+      });
+      //  }
+      return outputArray
+      //console.log(outputArray,"         dds")
+
+    })
+    .catch(error => console.log(error));
+
+  // console.log(bookeddates3)
 
 
- freezeDates = bookeddates1.concat(bookeddates2)
-//  freezeDates = freezeDates.concat(bookeddates3)
- //console.log(freezeDates,"                  datess ")
+  freezeDates = bookeddates1.concat(bookeddates2)
+  //  freezeDates = freezeDates.concat(bookeddates3)
+  //console.log(freezeDates,"                  datess ")
 
-return freezeDates
+  return freezeDates
 
 }
 
 async function initiateBulmaCalender() {
-  try{
-  var freezeddates = await getBookedDates();
-} catch(e){
-  console.log(e);
-}
+  try {
+    var freezeddates = await getBookedDates();
+  } catch (e) {
+    console.log(e);
+  }
 
 
-options = {
-  isRange: "true",
-  disabledDates:freezeddates,
-  labelFrom: "Check-In",
-  labelTo: "Check-Out",
-  dateFormat: "dd/MM/yyyy",
-  minDate: new Date(),
-};
-  if(freezeddates == undefined){
+  options = {
+    isRange: "true",
+    disabledDates: freezeddates,
+    labelFrom: "Check-In",
+    labelTo: "Check-Out",
+    dateFormat: "dd/MM/yyyy",
+    minDate: new Date(),
+  };
+  if (freezeddates == undefined) {
     options = {
       isRange: "true",
-    
+
       labelFrom: "Check-In",
       labelTo: "Check-Out",
       dateFormat: "dd/MM/yyyy",

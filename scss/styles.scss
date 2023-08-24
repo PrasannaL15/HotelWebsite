@@ -704,6 +704,7 @@ banner slider starts
     align-items: center;
     flex-direction: row;
     gap: 30px;
+    flex: 1;
   }
 
   .booking-part {
@@ -712,8 +713,8 @@ banner slider starts
 
     padding: 10px 10px;
     border-radius: $border-radius;
-    flex-grow: 0.5;
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -726,8 +727,22 @@ banner slider starts
 
     .checking-block {
       display: flex;
-      justify-content: center;
+      padding: 30px;
+      justify-content: space-between;
       align-items: center;
+      gap: 20px;
+      flex-direction: column;
+
+      .control {
+        text-align: center;
+
+
+        .input {
+          box-shadow: 0 0 0 0.125em hsla(249, 58%, 55%, 0.178);
+          text-align: center;
+          width: 75%;
+        }
+      }
     }
 
     .datetimepicker-dummy {

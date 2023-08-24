@@ -10048,14 +10048,15 @@ banner slider starts
   align-items: center;
   flex-direction: row;
   gap: 30px;
+  flex: 1;
 }
 .contact-section .booking-part {
   background-color: white;
   height: clamp(20rem, 70vh, 30rem);
   padding: 10px 10px;
   border-radius: 10px;
-  flex-grow: 0.5;
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   gap: 10px;
@@ -10067,8 +10068,19 @@ banner slider starts
 }
 .contact-section .booking-part .checking-block {
   display: flex;
-  justify-content: center;
+  padding: 30px;
+  justify-content: space-between;
   align-items: center;
+  gap: 20px;
+  flex-direction: column;
+}
+.contact-section .booking-part .checking-block .control {
+  text-align: center;
+}
+.contact-section .booking-part .checking-block .control .input {
+  box-shadow: 0 0 0 0.125em hsla(249, 58%, 55%, 0.178);
+  text-align: center;
+  width: 75%;
 }
 .contact-section .booking-part .datetimepicker-dummy {
   min-width: 300px;
